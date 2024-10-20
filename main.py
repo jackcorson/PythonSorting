@@ -65,7 +65,7 @@ def selectionSort(data):
     plt.show()
     return elapsed 
 
-def insertionSort(data):
+def insertionSort(data): 
     x = defineGraphAxes(data)
     start = time.time()
     for index, value in enumerate(data):
@@ -97,21 +97,31 @@ def exchangeSort(data):
                 data[ind] = temp
             plt.clf()
             plt.bar(x, data)
-            plt.pause(1)
+            plt.pause(.1)
 
     end = time.time()
     elapsed = end - start
     
     plt.show()
-    return data
+    return elapsed
             
 
-x = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] #Test array of random numbers, can be changed
-print(selectionSort(x))
-#print(exchangeSort(x))
-# print(bogoSort(x))
-#print(insertionSort(x))
-#print(bubbleSort(x))
+x = [5, 1, 2, 4, 3] #Test array of random numbers, can be changed
+
+elapsedTimeSelectionSort = selectionSort(x)
+print("{time:.2f} seconds".format(time = elapsedTimeSelectionSort))
+
+# elapsedTimeExchangeSort = exchangeSort(x)
+# print("{time:.2f} seconds".format(time = elapsedTimeExchangeSort))
+
+# elapsedTimeBogoSort = bogoSort(x)
+# print("{time:.2f} seconds".format(time = elapsedTimeBogoSort))
+
+# elapsedTimeInsertionSort = insertionSort(x)
+# print("{time:.2f} seconds".format(time = elapsedTimeInsertionSort))
+
+# elapsedTimeBubbleSort = bubbleSort(x)
+# print("{time:.2f} seconds".format(time = elapsedTimeBubbleSort))
 
 
 
